@@ -11,6 +11,9 @@ export default function DashboardAside() {
         <Link href="/staff" className="hover:text-indigo-600">
           Staff
         </Link>
+        <Link href="/circulars" className="hover:text-indigo-600">
+          Circulars
+        </Link>
         <Link href="/payment-voucher" className="hover:text-indigo-600">
           Payment Voucher
         </Link>
@@ -19,9 +22,6 @@ export default function DashboardAside() {
         </Link>
         <Link href="/memo" className="hover:text-indigo-600">
           Memo
-        </Link>
-        <Link href="/circulars" className="hover:text-indigo-600">
-          Circulars
         </Link>
       </nav>
     </>

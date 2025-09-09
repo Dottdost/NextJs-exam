@@ -39,7 +39,7 @@ export default function EditStaffPage() {
 
   return (
     <main className="p-6">
-      <h1 className="text-xl font-bold mb-4">Edit Staff</h1>
+      <h1 className="text-xl font-bold mb-4 text-black">Edit Staff</h1>
       <form onSubmit={handleSubmit} className="space-y-3 max-w-md">
         {Object.keys(form).map((key) => (
           <input
@@ -49,7 +49,7 @@ export default function EditStaffPage() {
             value={(form as any)[key]}
             onChange={handleChange}
             placeholder={key}
-            className="w-full border rounded p-2"
+            className="w-full border rounded p-2 text-black"
           />
         ))}
         <button

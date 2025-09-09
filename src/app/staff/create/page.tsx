@@ -52,53 +52,61 @@ export default function CreateStaffPage() {
 
   return (
     <main className="p-6 max-w-2xl">
-      <h1 className="text-xl font-bold mb-4">Add New Staff</h1>
+      <h1 className="text-xl font-bold mb-4 text-black">Add New Staff</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           name="firstName"
           placeholder="First Name"
           value={form.firstName}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <input
           name="lastName"
           placeholder="Last Name"
           value={form.lastName}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <input
           name="email"
           placeholder="Email"
           value={form.email}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <input
           name="phone"
           placeholder="Phone"
           value={form.phone}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <select
           name="role"
           value={form.role}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         >
-          <option value="">Select Role</option>
-          <option value="HR">HR</option>
-          <option value="IT">IT</option>
-          <option value="PM">PM</option>
+          <option value="" className="text-black">
+            Select Role
+          </option>
+          <option value="HR" className="text-black">
+            HR
+          </option>
+          <option value="IT" className="text-black">
+            IT
+          </option>
+          <option value="PM" className="text-black">
+            PM
+          </option>
         </select>
         <input
           name="designation"
           placeholder="Designation"
           value={form.designation}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <button
           type="submit"

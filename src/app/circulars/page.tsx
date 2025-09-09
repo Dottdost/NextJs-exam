@@ -8,10 +8,10 @@ export default function CircularsPage() {
   return (
     <main className="p-6 space-y-4">
       <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold">All Circulars</h1>
+        <h1 className="text-xl font-bold text-black">All Circulars</h1>
         <Link
           href="/circulars/create"
-          className="px-4 py-2 bg-blue-600 text-white rounded"
+          className="px-4 py-2 bg-blue-600 text-white rounded   "
         >
           Create Circular
         </Link>

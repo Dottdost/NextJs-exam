@@ -35,5 +35,9 @@ export function useStaff() {
     );
   }
 
-  return { staffList, addStaff, updateStaff };
+  function deleteStaff(id: number) {
+    setStaffList(staffList.filter((s) => s.id !== id));
+  }
+
+  return { staffList, addStaff, updateStaff, deleteStaff };
 }

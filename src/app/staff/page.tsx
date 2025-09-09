@@ -5,7 +5,7 @@ import { useStaff } from "../../../hooks/useStaff";
 
 export default function StaffPage() {
   const [roleFilter, setRoleFilter] = useState("All");
-  const { staffList } = useStaff();
+  const { staffList, deleteStaff } = useStaff();
   const [filtered, setFiltered] = useState(staffList);
 
   useEffect(() => {
@@ -19,17 +19,25 @@ export default function StaffPage() {
   return (
     <main className="p-6 space-y-4">
       <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold">All Staff</h1>
-        <div className="flex items-center gap-2">
+        <h1 className="text-xl font-bold text-black">All Staff</h1>
+        <div className="flex items-center gap-2 text-black">
           <select
             value={roleFilter}
             onChange={(e) => setRoleFilter(e.target.value)}
-            className="border rounded p-2"
+            className="border rounded p-2 text-black"
           >
-            <option value="All">All</option>
-            <option value="HR">HR</option>
-            <option value="IT">IT</option>
-            <option value="PM">PM</option>
+            <option value="All" className="text-black">
+              All
+            </option>
+            <option value="HR" className="text-black">
+              HR
+            </option>
+            <option value="IT" className="text-black">
+              IT
+            </option>
+            <option value="PM" className="text-black">
+              PM
+            </option>
           </select>
           <Link
             href="/staff/create"
@@ -44,10 +52,11 @@ export default function StaffPage() {
         {filtered.map((s) => (
           <li key={s.id} className="p-3 flex justify-between">
             <div>
-              <p className="font-medium">
+              <p className="font-medium text-black">
                 {s.firstName} {s.lastName}
               </p>
               <p className="text-sm text-gray-500">{s.designation}</p>
+              <p className="text-sm text-gray-400">{s.phone}</p>
             </div>
             <div className="flex gap-3">
               <Link
@@ -56,6 +65,12 @@ export default function StaffPage() {
               >
                 Edit
               </Link>
+              <button
+                onClick={() => deleteStaff(s.id)}
+                className="text-red-600 hover:underline"
+              >
+                Delete
+              </button>
             </div>
           </li>
         ))}

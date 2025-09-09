@@ -43,47 +43,47 @@ export default function CreateCircularPage() {
 
   return (
     <main className="p-6 max-w-2xl">
-      <h1 className="text-xl font-bold mb-4">Create Circular</h1>
+      <h1 className="text-xl font-bold mb-4 text-black">Create Circular</h1>
       <form onSubmit={handleSubmit} className="space-y-4 bg-white p-4 rounded">
         <input
           name="title"
           placeholder="Title"
           value={form.title}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <input
           name="from"
           placeholder="From"
           value={form.from}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <input
           name="to"
           placeholder="To"
           value={form.to}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <input
           type="date"
           name="date"
           value={form.date}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
         />
         <textarea
           name="message"
           placeholder="Message"
           value={form.message}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-black"
           rows={4}
         />
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-600 text-white rounded"
+          className="px-4 py-2 bg-blue-600 text-white rounded "
         >
           Create
         </button>
